@@ -9,12 +9,11 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 To do list：
 
 - [X] Release Inference code.
-- [X] Release PIDG custom physics-driven synthetic dataset.
-- [ ] Release the network architecture (including 4D decomposed hash encoding with dynamic and static decoupling, physical information material fields, and Lagrangian particle flows).
+- [X] Release partial PIDG custom physics-driven synthetic dataset.
+- [X] Release the network architecture (including 4D decomposed hash encoding with dynamic and static decoupling, physical information material fields, and Lagrangian particle flows).
 - [ ] Release Training code.
 - [ ] Release CUDA/C++ rasteriser.
 - [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
-
 
 ```
 
