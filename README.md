@@ -19,13 +19,13 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 ## To do list:
 
 - [X] Release Training Demo code.
-- [X] Release Inference code.
+- [X] Release Inference (rendering) code.
 - [X] Release the network architecture (including 4D decomposed hash encoding with dynamic and static decoupling, physical information material fields, and Lagrangian particle flows).
-- [X] Release CUDA/C++ rasteriser.
+- [X] Release CUDA/C++ optical-based rasteriser.
 - [X] Release the representative subset of fluid simulation scenes. (compressed by approximately 30× into the WebP format.)
 - [X] Release the dynamic reconstruction demo videos in representative scenes.
 - [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
-- [ ] Release PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
+- [ ] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
 - [ ] Release Training code.
 
 ## Datasets
@@ -48,7 +48,7 @@ Our experiments employ three monocular datasets:
    | Quantity                 | Method                                      | Checkpoint                                |
    | ------------------------ | ------------------------------------------- | ----------------------------------------- |
    | Optical flow & occlusion | **UniMatch** (Xu *et al.*)          | `GMFlow-scale2-regrefine6-sintelft`     |
-   | Motion mask              | **SAM-v2** (Ravi *et al.*)          | default                                   |
+   | Motion mask              | **SAM-v2** (Ravi *et al.*)          | `sam2.1_hiera_large.pt`                 |
    | Depth map                | **Distill Any Depth** (He *et al.*) | `Distill-Any-Depth-Multi-Teacher-Large` |
 
    **File-format conventions**
