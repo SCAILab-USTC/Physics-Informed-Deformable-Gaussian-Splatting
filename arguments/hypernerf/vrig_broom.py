@@ -40,5 +40,4 @@ deform_lr_max_steps = 30_000
 position_lr_max_steps = 30_000
 
 use_flow = True
-save_image_dir = "/opt/data/private/projects/Dynamic-Reconstruction/Ours-Projects/Flow-Based-Module/PIDG_final/outputs/vis/broom"
 dataset_type = "Hyper"

@@ -37,4 +37,4 @@ deform_lr_max_steps = 40_000
 position_lr_max_steps = 35_000
 
 use_flow = True
-save_image_dir = "/mnt/store2/fd/project/3D-Reconstruction/Dynamic/PIDG_static_dynamic/outputs/vis/3dprinter"
+dataset_type = "Hyper"

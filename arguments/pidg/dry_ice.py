@@ -33,4 +33,4 @@ temporal_perturb_range = [1e-2, 1e-2, 1e-2, 1e-3]
 
 warm_up = 0
 use_flow = True
-save_image_dir = "/opt/data/private/projects/Dynamic-Reconstruction/Ours-Projects/Flow-Based-Module/PIDG_static_dynamic/outputs/vis/dry_ice_new_velocity"
+dataset_type = "PIDG"

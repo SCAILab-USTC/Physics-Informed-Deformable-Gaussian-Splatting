@@ -125,7 +125,7 @@ class OptimizationParams(ParamGroup):
         
         self.use_flow = False
         self.flow_loss_weight = 0.01
-        self.save_image_dir = "/opt/data/private/projects/Dynamic-Reconstruction/Ours-Projects/Flow-Based-Module/PIDG_static_dynamic/output/vis/broom/v1"
+        self.save_image_dir = "/opt/data/private/projects/PIDG/outputs/"
         
         self.dataset_type = "Hyper"
         # self.dataset_type = "PIDG"

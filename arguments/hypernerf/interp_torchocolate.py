@@ -32,4 +32,4 @@ temporal_downsample_ratio = 1.0
 temporal_perturb_range = [1e-3, 1e-3, 1e-3, 0.0]
 
 use_flow = True
-save_image_dir = "/mnt/store2/fd/project/3D-Reconstruction/Dynamic/PIDG_static_dynamic/outputs/vis/torchocolate"
+dataset_type = "Hyper"

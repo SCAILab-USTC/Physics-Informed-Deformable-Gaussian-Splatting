@@ -32,4 +32,4 @@ temporal_downsample_ratio = 0.1
 temporal_perturb_range = [1e-2, 1e-2, 1e-2, 1e-3]
 
 use_flow = False
-save_image_dir = "/mnt/store2/fd/project/3D-Reconstruction/Dynamic/PIDG_static_dynamic/outputs/vis_test/rubber_dack"
+dataset_type = "PIDG"

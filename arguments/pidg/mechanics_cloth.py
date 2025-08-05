@@ -32,4 +32,4 @@ temporal_downsample_ratio = 0.1
 temporal_perturb_range = [1e-2, 1e-2, 1e-2, 1e-3]
 
 use_flow = True
-save_image_dir = "/opt/data/private/projects/Dynamic-Reconstruction/Ours-Projects/Flow-Based-Module/PIDG_static_dynamic/outputs/vis/mechanics_cloth"
+dataset_type = "PIDG"

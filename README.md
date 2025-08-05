@@ -42,7 +42,7 @@ Our experiments employ three monocular datasets:
 
 ### HyperNeRF (Real-world)
 
-1. **Geometry extraction**Point clouds are reconstructed with COLMAP following the protocol in **E-D3DGS***Per-Gaussian Embedding-Based Deformation for Deformable 3D Gaussian Splatting* (Bae *et al.*).
+1. **Geometry extraction:** Point clouds are reconstructed with COLMAP following the protocol in **E-D3DGS** *Per-Gaussian Embedding-Based Deformation for Deformable 3D Gaussian Splatting* (Bae *et al.*).
 2. **Auxiliary supervision**
 
    | Quantity                 | Method                                      | Checkpoint                                |
@@ -55,11 +55,9 @@ Our experiments employ three monocular datasets:
 
 
    * Optical flow is stored in Middlebury`.flo` files.
-   * Naming rule:*Forward* flow of frame*t* encodes motion**t → t + 1**;
-   * *Backward* flow of frame*t* encodes motion**t → t − 1**.
-3. For the HyperNeRF*vrig* scenes, we apply `./tools/hyper_filter.py` to filter the dataset such that only the left-view (monocular) images are retained for training, validation, and testing, without altering the original data split logic.
-
-**Ask ChatGPT**
+   * Naming rule: *Forward* flow of frame *t* encodes motion **t → t + 1**;
+   * *Backward* flow of frame *t* encodes motion **t → t − 1**.
+3. For the HyperNeRF *vrig* scenes, we apply `./tools/hyper_filter.py` to filter the dataset such that only the left-view (monocular) images are retained for training, validation, and testing, without altering the original data split logic.
 
 ---
 
