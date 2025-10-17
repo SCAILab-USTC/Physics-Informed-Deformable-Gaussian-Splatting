@@ -24,9 +24,10 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 - [X] Release CUDA/C++ optical-based rasteriser.
 - [X] Release the representative subset of fluid simulation scenes. (compressed by approximately 30× into the WebP format.)
 - [X] Release the dynamic reconstruction demo videos in representative scenes.
+- [X] Release Training code.
 - [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
 - [ ] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
-- [ ] Release Training code.
+
 
 ## Datasets
 
@@ -127,3 +128,11 @@ We use `./tools/dualtvl1.py` to extract the corresponding forward and backward o
 │     ├── balls-reaction
 │     ├── ...
 ```
+
+### Network Architecture Navigation
+**Section A: Dynamic-Static Decoupled 4D Hash Encoding**: ./hashencoder & ./train_pidg.py & ./scene_PIDG/gaussian_model.py and so on.
+
+**Section B: Physics-Informed Gaussian Representation**: ./motion_utils/time_evolving_material_field.py  & ./scene_PIDG/gaussian_model.py & ./scene_PIDG/deform_model.py & ./train_pidg.py and so on. 
+
+**Section C: Lagrangian Particle Flow Matching**：./submodules/flow-based-diff-gaussian-rasterization & ./utils/flow_utils.py & ./utils/flow_vis_utils.py and so on.
+
