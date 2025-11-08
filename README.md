@@ -10,7 +10,7 @@
 <p>
 
 **Authors:** Haoqin Hong†¹, Din Fan†¹, Fubing Dou¹, Zhili Zhou², Haoran Sun¹, Congcong Zhu‡¹, Jingrun Chen‡¹.  
-<sub>†Equal contribution. ‡Corresponding author.</sub>
+†Equal contribution. ‡Corresponding author. [[Project Page]](https://haoqinhong.github.io/Physics-Informed-Deformable-Gaussian-Splatting.github.io/)
 
 
 
