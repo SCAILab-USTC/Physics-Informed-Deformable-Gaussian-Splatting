@@ -4,7 +4,14 @@
 
 ![](assets/insights.png)
 
-This is the official code implementation of the paper "Physics-Informed Deformable Gaussian Splatting: Towards Unified Constitutive Laws for Time-Evolving Material Field". The paper is currently in the submission stage. We will open source each module in stages and release the complete code and dataset after the paper is accepted.
+This is the official code implementation of the paper "Physics-Informed Deformable Gaussian Splatting: Towards Unified Constitutive Laws for Time-Evolving Material Field". We will open source each module in stages and release the complete code and dataset after the paper is accepted.
+
+
+#### News
+
+- PIDG is accepted by AAAI-26! See you in Singapore!
+- Welcome to see more related cutting-edge research in [Awesome-Physics-Inspired-Vision-Understanding.](https://github.com/HaoqinHong/Awesome-Physics-Inspired-Vision-Understanding)
+
 
 ### Demo videos of dynamic reconstruction results from our PIDG method
 
@@ -32,8 +39,9 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 
 Our experiments employ three monocular datasets:
 
-| Dataset             | Type                      | Scenes                           | Source               |
-| ------------------- | ------------------------- | -------------------------------- | -------------------- |
+
+| Dataset       | Type                      | Scenes                           | Source               |
+| --------------- | --------------------------- | ---------------------------------- | ---------------------- |
 | **D-NeRF**    | Synthetic                 | 8, monocular                     | Official release     |
 | **HyperNeRF** | Real-world dynamic        | 7, Subset of monocular sequences | Official release     |
 | **PIDG**      | Synthetic, physics-driven | 5, Custom                        | Generated in Blender |
@@ -45,8 +53,9 @@ Our experiments employ three monocular datasets:
 1. **Geometry extraction:** Point clouds are reconstructed with COLMAP following the protocol in **E-D3DGS** *Per-Gaussian Embedding-Based Deformation for Deformable 3D Gaussian Splatting* (Bae *et al.*).
 2. **Auxiliary supervision**
 
-   | Quantity                 | Method                                      | Checkpoint                                |
-   | ------------------------ | ------------------------------------------- | ----------------------------------------- |
+
+   | Quantity                 | Method                              | Checkpoint                              |
+   | -------------------------- | ------------------------------------- | ----------------------------------------- |
    | Optical flow & occlusion | **UniMatch** (Xu *et al.*)          | `GMFlow-scale2-regrefine6-sintelft`     |
    | Motion mask              | **SAM-v2** (Ravi *et al.*)          | `sam2.1_hiera_large.pt`                 |
    | Depth map                | **Distill Any Depth** (He *et al.*) | `Distill-Any-Depth-Multi-Teacher-Large` |
@@ -65,11 +74,12 @@ Our experiments employ three monocular datasets:
 
 Because learning-based models trained on real imagery perform poorly on synthetic PIDG data, alternative preprocessing is applied:
 
-| Quantity     | Method                                                    |
-| ------------ | --------------------------------------------------------- |
-| Optical flow | Dual TV-L1 implementation in OpenCV                       |
-| Motion mask  | Extracted from RGBA alpha channel (background → mask)    |
-| Depth map    | Same**Distill Any Depth** pipeline as for HyperNeRF |
+
+| Quantity     | Method                                                 |
+| -------------- | -------------------------------------------------------- |
+| Optical flow | Dual TV-L1 implementation in OpenCV                    |
+| Motion mask  | Extracted from RGBA alpha channel (background → mask) |
+| Depth map    | Same**Distill Any Depth** pipeline as for HyperNeRF    |
 
 We use `./tools/dualtvl1.py` to extract the corresponding forward and backward optical flow between consecutive frames using the Dual TV-L1 algorithm. This script generates both `.flo` files for downstream processing and `.png` visualizations in HSV format for qualitative inspection.
 
