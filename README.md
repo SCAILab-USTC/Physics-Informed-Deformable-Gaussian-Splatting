@@ -1,13 +1,25 @@
 ![](assets/title.png)
 
-# Towards Unified Constitutive Laws for Time-Evolving Material Field
+## Towards Unified Constitutive Laws for Time-Evolving Material Field
+
+<p align="center">
+  <img src="assets/中国科学技术大学.png" alt="USTC Logo" height="60">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/UIUC.png" alt="UIUC Logo" height="70"><br>
+  <sub><b>¹ University of Science and Technology of China (USTC)</b> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; <b>² University of Illinois Urbana-Champaign (UIUC)</b></sub>
+<p>
+
+**Authors:** Haoqin Hong†¹, Din Fan†¹, Fubing Dou¹, Zhili Zhou², Haoran Sun¹, Congcong Zhu‡¹, Jingrun Chen‡¹.  
+<sub>†Equal contribution. ‡Corresponding author.</sub>
+
+
+
+### Overview
+This is the official code implementation of the paper "Physics-Informed Deformable Gaussian Splatting: Towards Unified Constitutive Laws for Time-Evolving Material Field". We will open source each module in stages and release the complete code and dataset after the paper is accepted.
 
 ![](assets/insights.png)
 
-This is the official code implementation of the paper "Physics-Informed Deformable Gaussian Splatting: Towards Unified Constitutive Laws for Time-Evolving Material Field". We will open source each module in stages and release the complete code and dataset after the paper is accepted.
-
-
-#### News
+### News
 
 - PIDG is accepted by AAAI-26! See you in Singapore!
 - Welcome to see more related cutting-edge research in [Awesome-Physics-Inspired-Vision-Understanding.](https://github.com/HaoqinHong/Awesome-Physics-Inspired-Vision-Understanding)
