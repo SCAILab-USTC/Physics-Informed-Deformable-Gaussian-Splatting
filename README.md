@@ -10,7 +10,11 @@
 <p>
 
 **Authors:** Haoqin Hong†¹, Din Fan†¹, Fubing Dou¹, Zhili Zhou², Haoran Sun¹, Congcong Zhu‡¹, Jingrun Chen‡¹.  
-†Equal contribution. ‡Corresponding author. [[Arxiv]](https://arxiv.org/abs/2511.06299) [[Project Page]](https://haoqinhong.github.io/Physics-Informed-Deformable-Gaussian-Splatting.github.io/) 
+†Equal contribution. ‡Corresponding author. 
+[![ArXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.06299) 
+[![Project Page](https://img.shields.io/badge/Project-Page-1E90FF?logo=googlechrome&logoColor=white)](https://haoqinhong.github.io/Physics-Informed-Deformable-Gaussian-Splatting.github.io/)
+
+
 
 
 
