@@ -21,6 +21,7 @@ except ImportError:
     TENSORBOARD_FOUND = False
 
 from motion_utils.pidg import cauchy_momentum_constraint
+from utils.flow_utils import motion_flow_velocity
 
 def cauchy_momentum_loss_sampled(
     gaussians,
@@ -132,7 +133,8 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations):
 
 
         # Render
-        render_pkg_re = render(viewpoint_cam, gaussians, pipe, background, d_xyz, d_rotation, d_scaling)
+        enable_flow_grad = True if opt.use_flow and (iteration % 100 == 0) and (iteration > opt.warm_up) else False
+        render_pkg_re = render(viewpoint_cam, gaussians, pipe, background, d_xyz, d_rotation, d_scaling, enable_flow_grad)
         image, viewspace_point_tensor, visibility_filter, radii = render_pkg_re["render"], render_pkg_re[
             "viewspace_points"], render_pkg_re["visibility_filter"], render_pkg_re["radii"]
 
@@ -156,6 +158,24 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations):
                 chunk_size = getattr(opt, 'physics_chunk_size', 5000)
             )
             loss = loss + opt.physics_loss_weight * cauchy_momentum_loss
+            
+            if opt.use_flow:
+                if viewpoint_cam.next_cam is not None:
+                    fid_next = viewpoint_cam.next_cam.fid
+                    time_input_next = fid_next.unsqueeze(0).expand(N, -1)
+                    deform_pkgs_next = deform.step(gaussians.get_xyz.detach(), time_input_next)
+                    d_xyz_next, d_rotation_next, d_scaling_next = deform_pkgs_next['d_xyz'], deform_pkgs_next['d_rotation'], deform_pkgs_next['d_scaling']
+                    enable_flow_grad = True
+                    render_pkg_re_2 = render(viewpoint_cam, gaussians, pipe, background, d_xyz_next, d_rotation_next, d_scaling_next, enable_flow_grad)
+                    velocity = gaussians.get_velocity_and_stress(viewpoint_cam.fid)[0]
+                    xyz_t_velocity = d_xyz[..., 4:, None] + velocity.unsqueeze(2) * (viewpoint_cam.next_cam.fid - viewpoint_cam.fid) # [N, 3, 1]
+                    d_xyz_velocity = torch.cat([d_xyz[..., :4], xyz_t_velocity.squeeze(-1)], dim=-1)
+                    render_pkg_re_velocity = render(viewpoint_cam, gaussians, pipe, background, d_xyz_velocity, d_rotation_next, d_scaling_next, enable_flow_grad)
+                    
+                    flow_loss = motion_flow_velocity(iteration, gaussians, viewpoint_cam, render_pkg_re, render_pkg_re_2, render_pkg_re_velocity, opt.save_image_dir, dataset_type="PIDG")
+                    
+                    loss = loss + opt.flow_loss_weight * flow_loss
+                    print(iteration, "Optical flow loss = {:.3e}".format(flow_loss.item()))
 
             if iteration % 1000 == 0:
                 # only for logging purpose
