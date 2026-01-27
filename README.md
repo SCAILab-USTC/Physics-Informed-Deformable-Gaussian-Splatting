@@ -162,5 +162,5 @@ We use `./tools/dualtvl1.py` to extract the corresponding forward and backward o
 
 **Section B: Physics-Informed Gaussian Representation**: ./motion_utils/time_evolving_material_field.py  & ./scene_PIDG/gaussian_model.py & ./scene_PIDG/deform_model.py & ./train_pidg.py and so on. 
 
-**Section C: Lagrangian Particle Flow Matching**：./submodules/flow-based-diff-gaussian-rasterization & ./utils/flow_utils.py & ./utils/flow_vis_utils.py and so on.
+**Section C: Lagrangian Particle Flow Matching**：./submodules/[flow-based-diff-gaussian-rasterization](https://github.com/HaoqinHong/flow-based-diff-gaussian-rasterization) & ./utils/flow_utils.py & ./utils/flow_vis_utils.py and so on.
 
