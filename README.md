@@ -27,8 +27,12 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 
 ### News
 
+- Add reminder of the code by Haoqin Hong (2026.2.5)
 - PIDG is accepted by AAAI-26! See you in Singapore!
 - Welcome to see more related cutting-edge research in [Awesome-Physics-Inspired-Vision-Understanding.](https://github.com/HaoqinHong/Awesome-Physics-Inspired-Vision-Understanding)
+
+### Reminder of the code by Haoqin Hong:
+I will regularly check the repository and respond to reported issues. As I am not the project owner, I may not always receive GitHub issue notifications in a timely manner. For urgent matters, please feel free to reach out to me via email (please refer to my GitHub homepage).
 
 
 ### Demo videos of dynamic reconstruction results from our PIDG method
