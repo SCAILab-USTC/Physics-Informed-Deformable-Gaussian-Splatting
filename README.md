@@ -57,6 +57,26 @@ I will regularly check the repository and respond to reported issues. As I am no
 - [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
 - [ ] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
 
+## Usage
+
+### Train
+To start the training process, specify the source scene data, configuration file and the target output directory.
+```shell
+python train_pidg.py -s <scene path> -m <output path> --conf ./arguments/<dataset>/<scene>.py
+```
+
+### Render
+
+```shell
+python render.py --conf ./arguments/<dataset>/<scene>.py -m <output path>
+```
+To achieve higher quality results, use the best-performing checkpoint by appending the iteration flag ```--iteration best```.
+
+### Evaluation
+
+```shell
+python metrics.py -m <output path>
+```
 
 ## Datasets
 
