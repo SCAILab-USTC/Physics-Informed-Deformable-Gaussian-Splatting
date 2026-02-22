@@ -57,6 +57,21 @@ I will regularly check the repository and respond to reported issues. As I am no
 - [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
 - [ ] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
 
+## Install
+```
+git clone https://github.com/SCAILab-USTC/Physics-Informed-Deformable-Gaussian-Splatting.git --recursive
+cd Physics-Informed-Deformable-Gaussian-Splatting/submodules
+git clone --recursive git@github.com:HaoqinHong/flow-based-diff-gaussian-rasterization.git
+cd ..
+
+conda create -n PIDG python=3.7.16
+conda activate PIDG
+
+pip install -r requirements.txt
+pip install -e ./submodules/flow-based-diff-gaussian-rasterization
+pip install -e ./submodules/simple-knn
+```
+
 ## Usage
 
 ### Train
