@@ -13,6 +13,7 @@
 †Equal contribution. ‡Corresponding author. 
 [![ArXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.06299) 
 [![Project Page](https://img.shields.io/badge/Project-Page-1E90FF?logo=googlechrome&logoColor=white)](https://haoqinhong.github.io/Physics-Informed-Deformable-Gaussian-Splatting.github.io/)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-FF69B4?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting)
 [![Poster](https://img.shields.io/badge/Poster-PDF-green?logo=adobeacrobatreader&logoColor=white)](https://drive.google.com/file/d/1Gs-3Q7FkAkiJchhpULthSEKDRWNrDgNH/view?usp=sharing)
 
 
@@ -27,7 +28,8 @@ This is the official code implementation of the paper "Physics-Informed Deformab
 
 ### News
 
-- Add reminder of the code by Haoqin Hong (2026.2.5)
+- Release the PIDG Dataset on Hugging Face, Feel free to check it out and use it for your research! 
+- Add reminder of the code by Haoqin Hong (2026.2.5).
 - PIDG is accepted by AAAI-26! See you in Singapore!
 - Welcome to see more related cutting-edge research in [Awesome-Physics-Inspired-Vision-Understanding.](https://github.com/HaoqinHong/Awesome-Physics-Inspired-Vision-Understanding)
 
@@ -54,8 +56,8 @@ I will regularly check the repository and respond to reported issues. As I am no
 - [X] Release the representative subset of fluid simulation scenes. (compressed by approximately 30× into the WebP format.)
 - [X] Release the dynamic reconstruction demo videos in representative scenes.
 - [X] Release Training code.
-- [ ] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
-- [ ] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
+- [x] Release experimental analysis code (velocity field and material field visualisation, Gaussian particle centre distribution, Gaussian particle variation residual analysis).
+- [x] Release full PIDG custom physics-driven synthetic dataset. (due to double-blind review constraints and space limitations, we are currently unable to anonymously upload the dataset)
 
 ## Install
 ```
